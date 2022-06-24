@@ -10,7 +10,7 @@ export class MainMenu extends Phaser.Scene {
         this.add.image(this.cameras.main.centerX, this.cameras.main.centerY/1.5, 'phaser_logo');
 
         const boton = new Button(this.cameras.main.centerX, this.cameras.main.centerY + this.cameras.main.centerY/3, 'JUGAR', this, () => {
-            this.scene.start("Play");
+            this.scene.start("Level1");
         });
     }
 }

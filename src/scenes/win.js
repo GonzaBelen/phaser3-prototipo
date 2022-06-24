@@ -1,14 +1,14 @@
 import Button from "../js/button.js";
 
-var score;
+var score2;
 
-export class Retry extends Phaser.Scene {
+export class Win extends Phaser.Scene {
   constructor() {
-    super("Retry");
+    super("Win");
   }
 
   init(data) {
-    score = data.score2;
+    score2 = data.score2;
   }
   create() {
     this.add
@@ -23,14 +23,14 @@ export class Retry extends Phaser.Scene {
       .text(
         this.cameras.main.centerX,
         this.cameras.main.centerY,
-        `Puntaje alcanzado: ${score}`
+        `Has ganado el juego, tu puntaje es de: ${score2}`
       )
       .setOrigin(0.5);
 
     const boton = new Button(
       this.cameras.main.centerX,
       this.cameras.main.centerY + this.cameras.main.centerY / 3,
-      "REINTENTAR",
+      "REINICIAR NIVELES",
       this,
       () => {
         this.scene.start("Level1");
