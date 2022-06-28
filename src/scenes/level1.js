@@ -97,7 +97,7 @@ export class Level1 extends Phaser.Scene {
 
     gameOver = false;
     score = 0;
-    tiempo = 5
+    tiempo = 60;
     this.time.addEvent({delay: 1000, callback: this.cronometro, callbackScope: this, loop: true})
 
     textoCronometro = this.add.text(0, 0, "tiempo: 60")
