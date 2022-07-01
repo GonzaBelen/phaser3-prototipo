@@ -7,7 +7,7 @@ var score;
 var gameOver;
 var scoreText;
 var tiempo;
-var textoCronometro;
+var textoCronometro; 
 
 export class Level1 extends Phaser.Scene {
   constructor() {
@@ -97,7 +97,7 @@ export class Level1 extends Phaser.Scene {
 
     gameOver = false;
     score = 0;
-    tiempo = 6;
+    tiempo = 60;
     this.time.addEvent({delay: 1000, callback: this.cronometro, callbackScope: this, loop: true})
 
     textoCronometro = this.add.text(0, 0, "tiempo: 60")
@@ -182,7 +182,7 @@ export class Level1 extends Phaser.Scene {
     tiempo = tiempo - 1
     textoCronometro.setText("tiempo: " + tiempo)
     if (tiempo <= 0){
-      this.scene.start("Level2");  
+      this.scene.start("Level2", {score}); 
     }
   }
 }

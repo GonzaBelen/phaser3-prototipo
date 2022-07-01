@@ -14,6 +14,10 @@ export class Level2 extends Phaser.Scene {
     super("Level2");
   }
 
+  init(data) {
+    score2 = data.score
+  }
+
   preload() {
     this.load.tilemapTiledJSON("map2", "public/assets/tilemaps/map2.json");
     this.load.image("tilesPlatform", "public/assets/images/platform-desert-atlas.png");
@@ -94,7 +98,6 @@ export class Level2 extends Phaser.Scene {
     this.physics.add.collider(player, bombs, this.hitBomb, null, this);
 
     gameOver = false;
-    score2 = 0;
     tiempo = 60;
     this.time.addEvent({delay: 1000, callback: this.cronometro, callbackScope: this, loop: true})
 
@@ -180,7 +183,7 @@ export class Level2 extends Phaser.Scene {
     tiempo = tiempo - 1
     textoCronometro.setText("tiempo: " + tiempo)
     if (tiempo <= 0){
-      this.scene.start("Win");  
+      this.scene.start("Win", {score2});  
     }
   }
 }
