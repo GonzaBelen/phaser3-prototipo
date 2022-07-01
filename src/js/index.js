@@ -31,4 +31,4 @@ var config = {
   scene: [Preloads, MainMenu, Level1, Level2, Retry, Win],
 };
 
-var game = new Phaser.Game(config);
+window.game = new Phaser.Game(config);
