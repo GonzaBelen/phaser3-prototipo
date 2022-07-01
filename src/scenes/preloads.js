@@ -4,7 +4,7 @@ export class Preloads extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image( "mainmenu_bg", "public/assets/images/main_menu_background.png");
+    this.load.image("mainmenu_bg", "public/assets/images/main_menu_background.png");
     this.load.image("phaser_logo", "public/assets/images/phaser_logo.png");
     this.load.image('background', 'public/assets/images/sky.png');
     this.load.image('ground', 'public/assets/images/platform.png');

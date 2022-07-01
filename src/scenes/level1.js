@@ -17,14 +17,14 @@ export class Level1 extends Phaser.Scene {
   preload() {
     this.load.tilemapTiledJSON("map", "public/assets/tilemaps/map.json");
     this.load.image("tilesBelow", "public/assets/images/sky-atlas.png");
-    this.load.image("tilesPlatform", "public/assets/images/platform-atlas.png");
+    this.load.image("tilesPlatform1", "public/assets/images/platform-atlas.png");
   }
 
   create() {
     const map = this.make.tilemap({ key: "map" });
 
     const tilesetBelow = map.addTilesetImage("sky-atlas", "tilesBelow");
-    const tilesetPlatform = map.addTilesetImage("platform-atlas", "tilesPlatform");
+    const tilesetPlatform = map.addTilesetImage("platform-atlas", "tilesPlatform1");
 
     const belowLayer = map.createLayer("sky", tilesetBelow, 0, 0);
     const worldLayer = map.createLayer("platform", tilesetPlatform, 0, 0);
@@ -97,7 +97,7 @@ export class Level1 extends Phaser.Scene {
 
     gameOver = false;
     score = 0;
-    tiempo = 60;
+    tiempo = 6;
     this.time.addEvent({delay: 1000, callback: this.cronometro, callbackScope: this, loop: true})
 
     textoCronometro = this.add.text(0, 0, "tiempo: 60")

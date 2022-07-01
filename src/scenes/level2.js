@@ -15,9 +15,8 @@ export class Level2 extends Phaser.Scene {
   }
 
   preload() {
-  this.load.tilemapTiledJSON("map2", "public/assets/tilemaps/map2.json");
-  this.load.image("tilesBelow", "public/assets/images/sky-atlas.png");
-  this.load.image("tilesPlatform", "public/assets/images/platform-desert-atlas.png");
+    this.load.tilemapTiledJSON("map2", "public/assets/tilemaps/map2.json");
+    this.load.image("tilesPlatform", "public/assets/images/platform-desert-atlas.png");
   }
 
   create() {
@@ -96,7 +95,7 @@ export class Level2 extends Phaser.Scene {
 
     gameOver = false;
     score2 = 0;
-    tiempo = 5
+    tiempo = 60;
     this.time.addEvent({delay: 1000, callback: this.cronometro, callbackScope: this, loop: true})
 
     textoCronometro = this.add.text(0, 0, "tiempo: 60")
