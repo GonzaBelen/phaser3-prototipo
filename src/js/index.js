@@ -3,6 +3,7 @@ import { MainMenu } from "../scenes/mainmenu.js";
 import { Level1 } from "../scenes/level1.js";
 import { Level2 } from "../scenes/level2.js";
 import { Retry } from "../scenes/retry.js";
+import { Retry2 } from "../scenes/retry2.js";
 import { Win } from "../scenes/win.js";
 
 var config = {
@@ -28,7 +29,7 @@ var config = {
       debug: false,
     },
   },
-  scene: [Preloads, MainMenu, Level1, Level2, Retry, Win],
+  scene: [Preloads, MainMenu, Level1, Level2, Retry, Retry2, Win],
 };
 
 window.game = new Phaser.Game(config);

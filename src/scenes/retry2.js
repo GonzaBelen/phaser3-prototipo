@@ -2,13 +2,13 @@ import Button from "../js/button.js";
 
 var score;
 
-export class Retry extends Phaser.Scene {
+export class Retry2 extends Phaser.Scene {
   constructor() {
-    super("Retry");
+    super("Retry2");
   }
 
   init(data) {
-    score = data.score;
+    score = data.score2;
   }
   create() {
     this.add

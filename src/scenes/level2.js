@@ -173,8 +173,8 @@ export class Level2 extends Phaser.Scene {
 
     setTimeout(() => {
       this.scene.start(
-        "Retry",
-        { score: score2 } 
+        "Retry2",
+        {score2} 
       );
     }, 1000);
   }
